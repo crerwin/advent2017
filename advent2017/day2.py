@@ -1,6 +1,8 @@
-# module day2.py
+from .day import Day
 
-input = '''
+class Day2(Day):
+    def __init__(self):
+        self.input_data = '''
 798	1976	1866	1862	559	1797	1129	747	85	1108	104	2000	248	131	87	95
 201	419	336	65	208	57	74	433	68	360	390	412	355	209	330	135
 967	84	492	1425	1502	1324	1268	1113	1259	81	310	1360	773	69	68	290
@@ -19,11 +21,11 @@ input = '''
 2155	225	2856	3061	105	204	1269	171	2505	2852	977	1377	181	1856	2952	2262
 '''
 
-def part1():
-    return checksum(input)
+    def part1(self):
+        return checksum(self.input_data)
 
-def part2():
-    return checksum2(input)
+    def part2(self):
+        return checksum2(self.input_data)
 
 def row_to_ints(row):
     rowlist = row.split()
