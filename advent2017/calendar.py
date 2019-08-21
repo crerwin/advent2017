@@ -1,7 +1,11 @@
-# module calendar.py
-
-from advent2017 import day3
+import importlib
+from .day import Day
 
 def dispatch(day, part):
-    myday = day3.Day3()
-    return myday.part1()
+    try:
+        DayClass = getattr(importlib.import_module("advent2017.day" + str(day)), 
+            "Day" + str(day))
+        myday = DayClass()
+    except:
+        myday = Day()
+    return myday.part(part)

@@ -1,5 +1,4 @@
-# module day3.py
-from advent2017 import day
+from .day import Day
 
-class Day3(day.Day):
+class Day3(Day):
     input = 277678
