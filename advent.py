@@ -1,8 +1,5 @@
 import argparse
-from advent2017 import day1, day2
-
-def dispatch(day, part):
-    return day2.part2()
+from advent2017 import calendar
 
 parser = argparse.ArgumentParser(description='adventofcode.com 2017 calendar')
 
@@ -13,4 +10,4 @@ parser.add_argument("part", type=int,
 
 args = parser.parse_args()
 
-print(dispatch(args.day, args.part))
+print(calendar.dispatch(args.day, args.part))
