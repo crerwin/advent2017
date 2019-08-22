@@ -5,7 +5,8 @@ def get_input(day):
         1: "file",
         2: "file",
         3: 277678,
-        4: "file"
+        4: "file",
+        5: "file"
     }
     if inputs[day] == "file":
         return load_from_file(day)
