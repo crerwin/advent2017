@@ -1,9 +1,10 @@
 import math
 from .day import Day
+from advent2017.input import load
 
 class Day3(Day):
     def __init__(self):
-        self.input_data = 277678
+        self.input_data = load.get_input(3)
 
     def part1(self):
         return find_retrieval_distance(self.input_data)
